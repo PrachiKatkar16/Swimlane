@@ -11,12 +11,14 @@ const blocksSlice = createSlice({
   },
   reducers: {
     updateBlockState: (state, action) => {
-      const { id, newState } = action.payload;
-      const block = state.blocks.find((block) => block.id === id);
+      const { id, newState, newDescription } = action.payload;
+      const block = state.blocks.find(block => block.id === id);
       if (block) {
         block.status = newState;
+        block.description = newDescription; // Update description
       }
     },
+    // Other reducers...
   },
 });
 

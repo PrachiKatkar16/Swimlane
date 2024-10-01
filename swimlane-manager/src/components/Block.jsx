@@ -7,7 +7,7 @@ import TaskDescriptionModal from './TaskDescriptionModal';
 const Block = ({ block }) => {
   const [{ isDragging }, drag] = useDrag({
     type: 'BLOCK',
-    item: { id: block.id },
+    item: { id: block.id, status: block.status }, // Pass the block's status as part of the item
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
@@ -43,5 +43,6 @@ const Block = ({ block }) => {
     </>
   );
 };
+
 
 export default Block;

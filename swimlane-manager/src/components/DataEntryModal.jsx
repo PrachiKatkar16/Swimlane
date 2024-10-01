@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 const DataEntryModal = ({ isOpen, onClose, onSubmit }) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
